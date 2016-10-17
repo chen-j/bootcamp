@@ -1,3 +1,5 @@
+#Exercise on Collection Methods - Monday 17 October 2016
+
 class ProgrammingLanguage
   attr_accessor :name, :age, :type
   def initialize(name, age, type)
