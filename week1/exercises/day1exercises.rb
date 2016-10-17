@@ -48,3 +48,18 @@ puts ""
 puts "Shuffled"
 shuffled_languages = sorted_array.shuffle
 array_printer(shuffled_languages)
+
+puts ""
+puts "Reversed"
+reversed_array = array_of_languages.reverse
+array_printer(reversed_array)
+
+puts ""
+puts "Only static"
+only_static = array_of_languages.select{|language| language.type == "Static"}
+array_printer(only_static)
+
+puts ""
+puts "Dropped"
+dropped_array = array_of_languages.drop(2)
+array_printer(dropped_array)
