@@ -32,3 +32,14 @@ puts ""
 puts "Lengths Array"
 puts lengths_array
 puts "------------"
+
+
+cities = ["dania","paris","camden"]
+
+capitalized_cities = cities.map do |city|
+  city.capitalize
+end
+
+puts "***Origin Cities for IronHackers***"
+puts capitalized_cities
+puts "____________________"
