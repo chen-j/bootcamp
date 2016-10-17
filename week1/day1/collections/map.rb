@@ -13,6 +13,10 @@ lowercase_array = heroes_array.map do |hero|
   hero.downcase
 end
 
+lengths_array = heroes_array.map do |hero|
+  hero.length
+end
+
 puts "Original Array"
 puts "------------"
 puts heroes_array
@@ -22,4 +26,9 @@ puts ""
 puts "------------"
 puts "New Array"
 puts lowercase_array
+puts "------------"
+puts ""
+puts ""
+puts "Lengths Array"
+puts lengths_array
 puts "------------"
