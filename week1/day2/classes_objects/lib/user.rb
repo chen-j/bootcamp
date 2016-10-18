@@ -19,4 +19,7 @@ class User
     puts "Hello, my name is #{@name}"
     puts "I am #{@age} years old"
   end
+
+  attr_accessor(:name, :email, :age, :ethnicity, :gender)
+
 end
