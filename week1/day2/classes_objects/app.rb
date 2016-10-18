@@ -1,16 +1,19 @@
 #app.rb
+#application code resides here
 
 require_relative("lib/user.rb")
 require_relative("lib/car.rb")
 
 
-first_user = User.new
+chenje = User.new("Chenje", "chenje@example.com", 26, "African", "male")
 
-first_user.login
-first_user.greet
+chenje.login
+chenje.greet
 
 
 
-first_car = Car.new
+nizars_car = Car.new("BMW",2016,"blue","Broom")
+nicks_car = Car.new("Porsche",2016,"white","BROOOOOM")
 
-first_car.noise
+nizars_car.noise
+nicks_car.noise

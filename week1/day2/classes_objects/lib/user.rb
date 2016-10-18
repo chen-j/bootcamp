@@ -1,11 +1,22 @@
 #lib/user.rb
 
+# name, email, age, ethnicity, gender
+
 class User
+  def initialize(name, email, age, ethnicity, gender)
+    @name = name
+    @email = email
+    @age = age
+    @ethnicity = ethnicity
+    @gender = gender
+  end
+
   def login
-    puts "User is logging in"
+    puts "#{@name} is logging in with email #{@email}"
   end
 
   def greet
-    puts "Hello"
+    puts "Hello, my name is #{@name}"
+    puts "I am #{@age} years old"
   end
 end
