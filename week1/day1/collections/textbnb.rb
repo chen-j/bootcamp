@@ -1,3 +1,7 @@
+#-----------------------
+#------- SETUP ---------
+#-----------------------
+
 class Home
   attr_reader(:name, :city, :capacity, :price)
 
@@ -9,6 +13,8 @@ class Home
   end
 end
 
+#-----------------------
+
 homes = [
   Home.new("Nizar's place", "San Juan", 2, 42),
   Home.new("Fernando's place", "Seville", 5, 47),
@@ -17,6 +23,9 @@ homes = [
   Home.new("Ariel's place", "San Juan", 4, 49)
 ]
 
+#-----------------------
+
+#ITERATION - Sort by price with average price displayed at the bottom
 price_sorted_homes = homes.sort {|a,b| b.price <=> a.price}
 
 #Ask if user wants to sort homes and set answer to a variable called sorted

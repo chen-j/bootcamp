@@ -1,4 +1,7 @@
 #Pair Programming Challenge - Monday 17 October 2016
+#/-------------------------------------------------
+#---------------- SETUP --------------------------
+#--------------------------------------------------/
 
 class ProgrammingLanguage
   attr_accessor :name, :age, :type
@@ -19,7 +22,11 @@ ruby = ProgrammingLanguage.new("Ruby", 21, "Dynamic")
 
   array_of_languages = [ruby, python, javascript, go, rust, swift, java]
 
-  def array_printer(array)
+#----------------------------------------------------
+#---------------------- EACH ------------------------
+#----------------------------------------------------
+
+def array_printer(array)
   array.each do | language |
     puts "Language: #{language.name} |  Age: #{language.age} |  Type System: #{language.type}"
   end
@@ -27,16 +34,32 @@ end
 
 array_printer(array_of_languages)
 
-aged_languages = array_of_languages.map do |lang|
-    ProgrammingLanguage.new(lang.name,lang.age+1,lang.type)
+#-----------------------------------------------
+#----------------------- MAP -------------------
+#-----------------------------------------------
+
+aged_languages = array_of_languages.map do |language|
+    ProgrammingLanguage.new(language.name,language.age+1,language.type)
 end
 
 puts "The programming languages aged one year are: "
 array_printer(aged_languages)
 puts ""
 
-sorted_array = array_of_languages.sort {|a,b| b.age <=> a.age}
+#----------------------
+#-------- SORT --------
+#----------------------
+
+sorted_array = array_of_languages.sort do |language_a,language_b|
+  #Switch A and B to get descending order
+  language_b.age <=> language_a.age
+  #flip _b and _a to sort in descending order
+end
 array_printer(sorted_array)
+
+#-----------------------
+#------ delete_at ------
+#-----------------------
 
 puts ""
 without_java = array_of_languages.map {|lang| lang}
@@ -45,6 +68,10 @@ array_printer(without_java)
 puts ""
 puts "Array of languages"
 array_printer(array_of_languages)
+
+#---------------------
+#---- SHUFFLE -------
+#---------------------
 
 puts ""
 puts "Shuffled"
