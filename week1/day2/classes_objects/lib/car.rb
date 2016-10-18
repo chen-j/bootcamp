@@ -9,19 +9,19 @@ class Car
   end
 
   def manuf
-    puts "#{@make}"
+    puts @make
   end
 
   def noise
-    puts "#{@sound}"
+    puts @sound
   end
 
   def paint
-    puts "#{@color}"
+    puts @color
   end
 
   def noise
-    puts "#{@sound}"
+    puts @sound
   end
 
 end
