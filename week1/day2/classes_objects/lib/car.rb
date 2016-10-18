@@ -12,8 +12,8 @@ class Car
     puts @make
   end
 
-  def noise
-    puts @sound
+  def age
+    puts @year
   end
 
   def paint
