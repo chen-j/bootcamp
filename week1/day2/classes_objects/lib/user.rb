@@ -1,3 +1,5 @@
+#lib/user.rb
+
 class User
   def login
     puts "User is logging in"

@@ -1,3 +1,8 @@
+#app.rb
+
+require_relative("lib/user.rb")
+require_relative("lib/car.rb")
+
 
 first_user = User.new
 
