@@ -8,7 +8,8 @@ class SalariedEmployee < Employee
 
     def calculate_salary
     	salary = @yearly_salary / 52.0
+			salary.round(2)
     	#tax = salary * 0.18
-    	#salary_after_tax = salary - tax 
+    	#salary_after_tax = salary - tax
     end
 end

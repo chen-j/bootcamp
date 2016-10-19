@@ -5,8 +5,9 @@ class Payroll
     end
 
   def pay_employees
-  	total_payroll = 0.0 
-  	employees.each do |employee|
+  	total_payroll = 0.0
+
+		@employees.each do |employee|
   		total_payroll += employee.calculate_salary
   	end
   	puts ""
@@ -21,12 +22,12 @@ class Payroll
   		puts "#{employee.name}: #{employee.calculate_salary}"
   		puts ""
   	end
-      # Should output how much we're paying each employee for this week and the total amount spent on payroll this week. 
+      # Should output how much we're paying each employee for this week and the total amount spent on payroll this week.
   end
   def notify_employee
   		employees.each do |employee|
   			puts "Notification sent to #{employee.name} at #{employee.email}"
   			puts ""
-  		end	
+  		end
   end
 end

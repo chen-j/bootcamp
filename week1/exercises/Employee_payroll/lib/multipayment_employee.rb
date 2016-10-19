@@ -10,11 +10,13 @@ class MultiPaymentEmployee < Employee
 
     def calculate_salary
       base_salary = @yearly_salary / 52.0
+			base_salary.round(2)
       # extra_hours = @hours_worked - 40
       # extra_salary = extra_hours * @hourly_rate
       extra_salary = hourly_rate * (@hours_worked - 40)
       salary = base_salary + extra_salary
+			salary.round(2)
       #tax = salary * 0.18
-      #salary_after_tax = salary - tax 
+      #salary_after_tax = salary - tax
     end
 end

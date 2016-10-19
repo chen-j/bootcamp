@@ -1,5 +1,6 @@
 class Post
   attr_accessor :title, :date, :text
+
   def initialize(title, date, text)
     @title = title
     @date = date
@@ -8,7 +9,7 @@ class Post
 
   def display_blog_post
     puts ""
-    puts "Title: #{@title}"
+    puts {@title}
     puts "******************"
     puts @text
     puts "--------------------"
