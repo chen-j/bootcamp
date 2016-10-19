@@ -14,8 +14,8 @@ movies = []
 File.readlines(file).each do |line|
 	the_search = Imdb::Search.new(line)
 	first_result = the_search.movies[0]
-	movie_rating = first_result.rating 
-	movies << (first_result)	
+	movie_rating = first_result.rating
+	movies << (first_result)
 end
 
 10.downto(1) do |i|
@@ -23,14 +23,14 @@ end
 
 	movies.each do |movie|
 
-		if movie.rating >= i 
+		if movie.rating >= i
 			graph += "|#"
-		else 
+		else
 			graph += "| "
 		end
 	end
 
-	# if  movies.length == File.readlines(file).size 	
+	# if  movies.length == File.readlines(file).size
 	 	puts graph
 	# end
 end
@@ -49,4 +49,3 @@ puts ""
 	puts "#{n+1}) #{movies[n].title}"
 	puts ""
 end
-	
