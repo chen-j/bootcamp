@@ -13,6 +13,9 @@ game.add_room(Room.new("Room 4", "E", "W"))
 game.add_room(Room.new("Room 5" ,"E", "W"))
 
 puts "You are in #{game.rooms[pos].description}"
+puts "Entry of this room is #{game.rooms[pos].entry}"
+puts "Exit of this room is #{game.rooms[pos].exit}"
+
 
 # def move
 # user_input = nil
