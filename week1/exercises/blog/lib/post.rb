@@ -6,11 +6,13 @@ class Post
     @text = text
   end
 
-  def blog_post
+  def display_blog_post
+    puts ""
     puts "Title: #{@title}"
     puts "******************"
     puts @text
     puts "--------------------"
+    puts ""
   end
 
 end
