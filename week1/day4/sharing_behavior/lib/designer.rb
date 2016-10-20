@@ -1,6 +1,6 @@
-class Designer < CaffeineConsumer
+class Designer
   include Payable
-  
+  include CaffeineConsumer
   def design_things
     consume_caffeine
     select_typography

@@ -1,5 +1,6 @@
-class Programmer < CaffeineConsumer
+class Programmer
   include Payable
+  include CaffeineConsumer
 
   def program
       consume_caffeine
