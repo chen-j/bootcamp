@@ -1,12 +1,8 @@
-class Designer
+class Designer < CaffeineConsumer
   def design_things
     consume_caffeine
     select_typography
     select_colours
-  end
-
-  def consume_caffeine
-    puts "mmmmmmmm"
   end
 
   def select_typography
