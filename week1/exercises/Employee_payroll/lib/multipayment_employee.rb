@@ -1,4 +1,5 @@
 class MultiPaymentEmployee < Employee
+	include CalculateHrlySalary
 	attr_accessor(:name, :email, :yearly_salary, :hourly_rate, :hourly_worked)
     def initialize(name, email, yearly_salary, hourly_rate, hours_worked)
         @name = name

@@ -1,4 +1,5 @@
 class HourlyEmployee < Employee
+	include CalculateHrlySalary
 	attr_accessor(:name, :email, :hourly_rate, :hourly_worked)
     def initialize(name, email, hourly_rate, hours_worked)
         @name = name
@@ -7,10 +8,11 @@ class HourlyEmployee < Employee
         @hours_worked = hours_worked
     end
 
+
     def calculate_salary
-    	salary = @hourly_rate * @hours_worked
+			calculate_hrly_salary(@hours_worked)
     	#tax = salary * 0.18
-    	#salary_after_tax = salary - tax 
+    	#salary_after_tax = salary - tax
       #returns the hours worked * hourly_rate
     end
 end
