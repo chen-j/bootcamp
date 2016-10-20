@@ -6,11 +6,11 @@ class Room
     @entry = entry
   end
 
-  def display_room
-    puts ""
-    puts "Room: #{@name} has #{@doors}"
-    puts ""
-  end
+  # def display_room
+  #   puts ""
+  #   puts "Room: #{@name} has #{@doors}"
+  #   puts ""
+  # end
 
-  
+
 end

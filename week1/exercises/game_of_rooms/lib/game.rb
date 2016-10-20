@@ -10,17 +10,18 @@ class Game
     @rooms.push(room)
   end
 
-  def move()
-  user_input = nil
+  def move
     while pos <= @rooms.length
-          puts "You're in #{rooms[pos].description}"
+          #puts "You're in #{rooms[pos].description}"
           puts "Which way? [E,W,S,N]?"
           user_input = gets.chomp
-        if user_input == "#{rooms[pos].exit}"
-          @pos += 1
-        else
+          if pos == 5 && user_input == "#{rooms[pos].exit}"
+            puts "You have cracked this game"
+          elsif user_input == "#{rooms[pos].exit}"
+            @pos += 1
+          else
           puts "No way there, try again?"
-        end
+          end
     end
   end
 
