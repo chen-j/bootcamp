@@ -1,4 +1,5 @@
 require_relative("lib/employee.rb")
+require_relative("lib/calculate_hrly_salary.rb")
 require_relative("lib/hourly_employee.rb")
 require_relative("lib/salaried_employee.rb")
 require_relative("lib/multipayment_employee.rb")
@@ -19,4 +20,4 @@ payroll.pay_employees
 # etc
 # etc
 
-payroll.notify_employee 
+payroll.notify_employee
