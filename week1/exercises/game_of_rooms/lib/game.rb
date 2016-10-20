@@ -11,12 +11,13 @@ class Game
   end
 
   def move
-    while pos <= @rooms.length
-          #puts "You're in #{rooms[pos].description}"
+    while pos <= @rooms.length - 1
+          puts "You're in #{rooms[pos].description}"
           puts "Which way? [E,W,S,N]?"
           user_input = gets.chomp
-          if pos == 5 && user_input == "#{rooms[pos].exit}"
+          if pos == @rooms.length - 1 && user_input == "#{rooms[pos].exit}"
             puts "You have cracked this game"
+            break
           elsif user_input == "#{rooms[pos].exit}"
             @pos += 1
           else
