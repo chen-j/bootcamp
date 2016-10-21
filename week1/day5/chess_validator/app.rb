@@ -2,6 +2,7 @@ require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
 require_relative("lib/bishop.rb")
 require_relative("lib/knight.rb")
+require_relative("lib/queen.rb")
 
 
 
@@ -22,9 +23,12 @@ black_king = King.new(5, 1, "black")
 #puts black_king.move_to(4,2)
 
 
-black_bishop_left = Bishop.new(5, 4, "black")
+#black_bishop_left = Bishop.new(5, 4, "black")
+#puts black_bishop_left.move_to(3,6)
 
-puts black_bishop_left.move_to(3,6)
+black_queen = Queen.new(4, 1, "black")
+puts black_queen.move_to(5,3)
+
 
 # black_knight_left = Knight.new(2, 1, "black")
 #
