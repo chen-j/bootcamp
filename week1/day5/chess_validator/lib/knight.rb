@@ -1,4 +1,4 @@
-class Bishop
+class Knight
     attr_accessor(:orig_x, :orig_y, :color)
     def initialize(orig_x, orig_y,color)
       @orig_x = orig_x
@@ -7,7 +7,7 @@ class Bishop
     end
 
     def move_to(dest_x, dest_y)
-        if (@orig_x - dest_x).abs == (@orig_y - dest_y).abs
+        if (@orig_x - dest_x).abs == 2*(@orig_y - dest_y).abs || (@orig_y - dest_y).abs == 2*(@orig_x - dest_x).abs
           puts "LEGAL"
         else
           puts "ILLEGAL"
