@@ -36,10 +36,10 @@ require_relative("lib/pawn.rb")
 #
 # puts black_knight_left.move_to(3,3)
 
-black_pawn = BlackPawn.new(1, 2, "black")
+black_pawn = BlackPawn.new(4, 7, "black")
 
-white_pawn = WhitePawn.new(1, 5, "white")
+white_pawn = WhitePawn.new(4, 4, "white")
 
-p white_pawn.move_to(1,4)  #legal
-p white_pawn.move_to(1,3)  #illegal
-p black_pawn.move_to(1,1) #illegal
+p white_pawn.move_to(4,5)  #legal
+p black_pawn.move_to(4,6)  #legal
+#p black_pawn.move_to(1,4) #illegal
