@@ -22,6 +22,7 @@ class BlackPawn
     def initialize(orig_x, orig_y, color)
       @orig_x = orig_x
       @orig_y = orig_y
+			@color = color
     end
 
     def move_to(dest_x, dest_y)
