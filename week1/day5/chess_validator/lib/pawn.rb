@@ -3,6 +3,7 @@ class WhitePawn
     def initialize(orig_x, orig_y, color)
       @orig_x = orig_x
       @orig_y = orig_y
+      @color = color
       @num_moves = 0
     end
 
