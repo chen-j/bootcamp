@@ -6,6 +6,6 @@ class ChessBoard
   end
 
   def place_piece(piece)
-    @chess_board.push(piece)
+    @chess_board[piece.orig_x][piece.orig_y] = piece
   end
 end
