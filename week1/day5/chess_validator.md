@@ -1,13 +1,18 @@
-Rooks - Compare coordinates origin(a,b) - destination(c,d)
-        One of the coordinates needs to stay the same and the other can change
-        up or down by any value between 1-8 inclusive
+# Chess Validator
+[Ironhack](http://ironhack.com) Week One Friday Challenge - October 2016
 
-King  - 
+A ruby script that runs in the terminal for checking validity of chess moves.
 
+The starting point and finishing point of a given piece are passed as arguments in the `app.rb` file after adding said piece to the board.
 
+Ex: Add Black King to board and check to see if moving the Black King piece to new location is valid or not valid
 
-Knight -
+`black_king = King.new(5, 8, "black")`
 
+`board.place_piece(black_king)`
 
+Check if Black King can move to `5,7`
 
-Bishop -
+`puts board.chess_board[5][8]`
+
+`ILLEGAL` is returned for illegal moves and `LEGAL` is returned for legal moves.
