@@ -13,6 +13,6 @@ Ex: Add Black King to board and check to see if moving the Black King piece to n
 
 Check if Black King can move to `5,7`
 
-`puts board.chess_board[5][8]`
+`puts board.can_move?(5, 8, 5, 7)`
 
 `ILLEGAL` is returned for illegal moves and `LEGAL` is returned for legal moves.
