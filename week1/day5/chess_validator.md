@@ -1,4 +1,5 @@
 # Chess Validator
+
 [Ironhack](http://ironhack.com) Week One Friday Challenge - October 2016
 
 A ruby script that runs in the terminal for checking validity of chess moves.
@@ -17,8 +18,8 @@ Check if Black King can move to `5,7`
 
 `ILLEGAL` is returned for illegal moves and `LEGAL` is returned for legal moves.
 
-Assumptions
------------
-* The pieces are on a board with no destructions from other pieces
-* Chess board is an 8x8 with labelled 1-8 on the y axis and 1-8 instead of the usual a-h on the x-axis.
-* You're not actually playing a game of chess when you run and edit the chess validator but simply checking if a proposed move is valid or not from a given start position .
+## Assumptions
+
+- The pieces are on a board with no destructions from other pieces
+- Chess board is an 8x8 with labelled 1-8 on the y axis and 1-8 instead of the usual a-h on the x-axis.
+- You're not actually playing a game of chess when you run and edit the chess validator but simply checking if a proposed move is valid or not from a given start position .
