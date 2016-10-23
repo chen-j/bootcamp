@@ -7,7 +7,7 @@ class King
     end
 
     def move_to(dest_x, dest_y)
-        if (@orig_x - dest_x).abs == 1 || @orig_y - dest_y == 1.abs
+        if (@orig_x - dest_x).abs == 1 || (@orig_y - dest_y).abs == 1
             puts 'LEGAL'
         else
             puts 'ILLEGAL'

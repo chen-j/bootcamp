@@ -35,8 +35,10 @@ white_king = King.new(5, 1, "white")
 board.place_piece(black_king)
 board.place_piece(white_king)
 
-puts board.chess_board[5][1].inspect
-puts board.chess_board[5][8].inspect
+puts board.can_move?(5, 1, 5, 2)
+#p board.chess_board[5][1].can_move?(5, 6 ,1, 2)
+#p board.chess_board[5][8]
+
 
 
 #black_bishop_left = Bishop.new(5, 4, "black")
