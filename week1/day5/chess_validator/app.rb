@@ -25,14 +25,14 @@ board = ChessBoard.new
 # puts black_rook_left.move_to(1,3)
 # puts black_rook_left.move_to(1,2)
 
-# black_king = King.new(5, 8, "black")
+black_king = King.new(5, 8, "black")
 # white_king = King.new(5, 1, "white")
-# board.place_piece(black_king)
+board.place_piece(black_king)
 # board.place_piece(white_king)
 
-# puts board.can_move?(5, 1, 5, 2)
-# p board.chess_board[5][1].can_move?(5, 6 ,1, 2)
-# p board.chess_board[5][8]
+puts board.can_move?(5, 8, 5, 7)
+# puts board.chess_board[5][8].can_move?(5, 7 ,1, 2)
+# puts board.chess_board[5][8]
 
 # black_bishop_left = Bishop.new(5, 4, "black")
 # puts black_bishop_left.move_to(3,6)
@@ -44,16 +44,16 @@ board = ChessBoard.new
 #
 # puts black_knight_left.move_to(3,3)
 
-black_pawn = Pawn.new(7, 7, 'black')
+# black_pawn = Pawn.new(7, 7, 'black')
 #
 # white_pawn = WhitePawn.new(2, 2, "white")
 #
 # p white_pawn.move_to(2,3)  #legal
 # p white_pawn.move_to(2,4)  #legal
-puts black_pawn.move_to(7, 6)  # legal
-puts black_pawn.move_to(7, 5)  # legal
+# puts black_pawn.move_to(7, 6)  # legal
+# puts black_pawn.move_to(7, 5)  # legal
 #
 # p white_pawn.move_to(2,6)  #illegal
 # p white_pawn.move_to(2,7)  #illegal
-puts black_pawn.move_to(7, 3)	 # illegal
-puts black_pawn.move_to(7, 2)  # illegal
+# puts black_pawn.move_to(7, 3)	 # illegal
+# puts black_pawn.move_to(7, 2)  # illegal
