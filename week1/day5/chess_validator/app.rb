@@ -16,10 +16,10 @@ board = ChessBoard.new
 #  ------------------------- ROOK --------------------------
 #  ---------------------------------------------------------/
 
-black_rook_left = Rook.new(1, 8, "black")
-black_rook_right = Rook.new(8, 8, "black")
-board.place_piece(black_rook_left)
-board.place_piece(black_rook_right)
+# black_rook_left = Rook.new(1, 8, "black")
+# black_rook_right = Rook.new(8, 8, "black")
+# board.place_piece(black_rook_left)
+# board.place_piece(black_rook_right)
 
 
 #white_rook_right = Rook.new(8, 1, "white")
@@ -30,12 +30,12 @@ board.place_piece(black_rook_right)
 # puts black_rook_left.move_to(1,2)
 
 
-black_king = King.new(5, 8, "black")
-white_king = King.new(5, 1, "white")
-board.place_piece(black_king)
-board.place_piece(white_king)
+# black_king = King.new(5, 8, "black")
+# white_king = King.new(5, 1, "white")
+# board.place_piece(black_king)
+# board.place_piece(white_king)
 
-puts board.can_move?(5, 1, 5, 2)
+# puts board.can_move?(5, 1, 5, 2)
 #p board.chess_board[5][1].can_move?(5, 6 ,1, 2)
 #p board.chess_board[5][8]
 
@@ -52,16 +52,16 @@ puts board.can_move?(5, 1, 5, 2)
 #
 # puts black_knight_left.move_to(3,3)
 
-# black_pawn = BlackPawn.new(7, 7, "black")
+black_pawn = Pawn.new(7, 7, "black")
 #
 # white_pawn = WhitePawn.new(2, 2, "white")
 #
 # p white_pawn.move_to(2,3)  #legal
 # p white_pawn.move_to(2,4)  #legal
-# p black_pawn.move_to(7,6)  #legal
-# p black_pawn.move_to(7,5)  #legal
+ puts black_pawn.move_to(7,6)  #legal
+ puts black_pawn.move_to(7,5)  #legal
 #
 # p white_pawn.move_to(2,6)  #illegal
 # p white_pawn.move_to(2,7)  #illegal
-# p black_pawn.move_to(7,3)	 #illegal
-# p black_pawn.move_to(7,2)  #illegal
+ puts black_pawn.move_to(7,3)	 #illegal
+ puts black_pawn.move_to(7,2)  #illegal
