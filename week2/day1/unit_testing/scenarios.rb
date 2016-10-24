@@ -21,3 +21,4 @@ p the_calculator.add("7,7,1,2") == 17
 p the_calculator.add("7$7$1$2") == 17
 
 p the_calculator.add("7$7,1,2") == 17
+p the_calculator.add("7$7,1,21") == 36
