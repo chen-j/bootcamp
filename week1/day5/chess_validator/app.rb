@@ -30,7 +30,7 @@ black_king = King.new(5, 8, "black")
 board.place_piece(black_king)
 # board.place_piece(white_king)
 
-puts board.can_move?(5, 8, 5, 7)
+puts board.can_move?(5, 8, 5, 6)
 # puts board.chess_board[5][8].can_move?(5, 7 ,1, 2)
 # puts board.chess_board[5][8]
 
