@@ -1,3 +1,7 @@
+# /---------------------------------------------------------
+#  ---------------- REFERENCE CLASS FILES ------------------
+#  ---------------------------------------------------------/
+
 require_relative('lib/pieces.rb')
 require_relative('lib/rook.rb')
 require_relative('lib/king.rb')
@@ -7,11 +11,32 @@ require_relative('lib/queen.rb')
 require_relative('lib/pawn.rb')
 require_relative('lib/board.rb')
 
+# /---------------------------------------------------------
+#  --------- CREATE AN INSTANCE OF THE BOARD ---------------
+#  ---------------------------------------------------------/
+
 board = ChessBoard.new
 
 # /---------------------------------------------------------
-#  ------------------------- ROOK --------------------------
+#  ---------- CREATE AN INSTANCE OF A PIECE ----------------
 #  ---------------------------------------------------------/
+
+black_king = King.new(5, 8, "black")
+
+
+# /---------------------------------------------------------
+#  ------------- PLACE CREATED PIECES ON BOARD ---------------
+#  ---------------------------------------------------------/
+
+board.place_piece(black_king)
+
+
+# /------------------------------------------------------------------------------
+#  ----- CHECK LEGALITY OF MOVE FROM ONE POINT TO ANOTHER WITHIN THE BOARD ------
+#  ------------------------------------------------------------------------------/
+
+puts board.can_move?(5, 8, 5, 6)
+
 
 # black_rook_left = Rook.new(1, 8, "black")
 # black_rook_right = Rook.new(8, 8, "black")
@@ -25,12 +50,11 @@ board = ChessBoard.new
 # puts black_rook_left.move_to(1,3)
 # puts black_rook_left.move_to(1,2)
 
-black_king = King.new(5, 8, "black")
 # white_king = King.new(5, 1, "white")
-board.place_piece(black_king)
+#board.place_piece(black_king)
 # board.place_piece(white_king)
 
-puts board.can_move?(5, 8, 5, 6)
+#puts board.can_move?(5, 8, 5, 6)
 # puts board.chess_board[5][8].can_move?(5, 7 ,1, 2)
 # puts board.chess_board[5][8]
 
