@@ -40,5 +40,10 @@ RSpec.describe StringCalculator do
 			the_calc = StringCalculator.new
 			expect(the_calc.add("7$7,1,21")).to eq(36)
 		end
+
+		it "add multiple digit numbers separated but any special character or letter" do
+			the_calc = StringCalculator.new
+			expect(the_calc.add("7-7,1z21")).to eq(36)
+		end
 	end
 end
