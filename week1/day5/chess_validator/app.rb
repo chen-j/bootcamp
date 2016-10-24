@@ -21,8 +21,7 @@ board = ChessBoard.new
 #  ---------- CREATE AN INSTANCE OF A PIECE ----------------
 #  ---------------------------------------------------------/
 
-black_king = King.new(5, 8, "black")
-
+black_king = King.new(5, 8, 'black')
 
 # /---------------------------------------------------------
 #  ------------- PLACE CREATED PIECES ON BOARD ---------------
@@ -30,13 +29,11 @@ black_king = King.new(5, 8, "black")
 
 board.place_piece(black_king)
 
-
 # /------------------------------------------------------------------------------
 #  ----- CHECK LEGALITY OF MOVE FROM ONE POINT TO ANOTHER WITHIN THE BOARD ------
 #  ------------------------------------------------------------------------------/
 
 puts board.can_move?(5, 8, 5, 7)
-
 
 # black_rook_left = Rook.new(1, 8, "black")
 # black_rook_right = Rook.new(8, 8, "black")
@@ -51,10 +48,10 @@ puts board.can_move?(5, 8, 5, 7)
 # puts black_rook_left.move_to(1,2)
 
 # white_king = King.new(5, 1, "white")
-#board.place_piece(black_king)
+# board.place_piece(black_king)
 # board.place_piece(white_king)
 
-#puts board.can_move?(5, 8, 5, 6)
+# puts board.can_move?(5, 8, 5, 6)
 # puts board.chess_board[5][8].can_move?(5, 7 ,1, 2)
 # puts board.chess_board[5][8]
 
