@@ -35,7 +35,7 @@ board.place_piece(black_king)
 #  ----- CHECK LEGALITY OF MOVE FROM ONE POINT TO ANOTHER WITHIN THE BOARD ------
 #  ------------------------------------------------------------------------------/
 
-puts board.can_move?(5, 8, 5, 6)
+puts board.can_move?(5, 8, 5, 7)
 
 
 # black_rook_left = Rook.new(1, 8, "black")
