@@ -2,15 +2,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Online Calculator</title>
+		<title>Math | Online Calculator</title>
 	</head>
-	<body>
-		<h1>Math Online</h1>
-		<ul>
-			<li><a href="/add">Addition</li>
-			<li><a href="/subtract">Subtration</li>
-			<li><a href="/multiply">Multiplication</li>
-			<li><a href="/divide">Division</li>	
-		</ul>
+	<body style="text-align:center; margin-top:200px;">
+		<img src="/calc.png" style="width:8%;">
+		<h3>Online Calculator</h3>
+		<form action="/result" method="POST">
+			<input type="number" name="first_number" placeholder="1st number">
+			||
+			<input type="number" name="second_number" placeholder="2nd number">
+			<br>
+			<br>
+			<button type="submit" name="operation" value="addition">Add</button>
+			<button type="submit" name="operation" value="subtraction">Subtract</button>
+			<button type="submit" name="operation" value="division">Divide</button>
+			<button type="submit" name="operation" value="multiplication">Multiply</button>
+		</form>
+
 	</body>
 </html>
