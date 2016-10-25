@@ -21,6 +21,6 @@ class Task
 			@completed = false
 		end
 
-
+		
 
 end
