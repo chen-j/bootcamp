@@ -30,6 +30,14 @@ RSpec.describe Task do
 			end
 		end
 
+		describe "update_content!" do
+			it "changes the text of a task" do
+				task = Task.new("Buy rooster")
+				task.update_content!("Buy router")
+				expect(task.content).to eq("Buy router")
+			end
+		end
+
 end
 
 end
