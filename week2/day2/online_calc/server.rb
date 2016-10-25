@@ -15,19 +15,19 @@ post "/result" do
  	second = params[:second_number].to_f
 	if params[:operation] == "addition"
 		result = first + second
-		@result ="The addition of #{first} and #{second} is #{result}"
+		@result ="The addition of #{first} and #{second} is #{result.round(3)}"
 		erb(:result)
 	elsif params[:operation] == "subtraction"
 		result = first - second
-	 	@result ="The subtraction of #{first} and #{second} is #{result}"
+	 	@result ="The subtraction of #{first} and #{second} is #{result.round(3)}"
 		erb(:result)
 	elsif params[:operation] == "multiplication"
 		result = first * second
-	 	@result = "The multiplication of #{first} and #{second} is #{result}"
+	 	@result = "The multiplication of #{first} and #{second} is #{result.round(3)}"
 		erb(:result)
 	elsif params[:operation] == "division"
 		result = first / second
-	 	@result = "The division of #{first} and #{second} is #{result}"
+	 	@result = "The division of #{first} and #{second} is #{result.round(3)}"
 		erb(:result)
 	end
 

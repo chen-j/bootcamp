@@ -3,20 +3,31 @@
 <html>
 	<head>
 		<title>Math | Online Calculator</title>
+		<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans" rel="stylesheet">
 	</head>
-	<body style="text-align:center; margin-top:200px;">
+	<body style="text-align:center; margin-top:200px; background: aliceblue;">
 		<img src="/calc.png" style="width:8%;">
-		<h3>Online Calculator</h3>
+		<h2 style="font-family: 'Fira Sans', sans-serif;">Online Calculator</h2>
 		<form action="/result" method="POST">
-			<input type="number" name="first_number" placeholder="1st number">
-			||
-			<input type="number" name="second_number" placeholder="2nd number">
+			<input type="number" name="first_number" placeholder="1st number" style="border: solid 1px;
+    border-radius: 5px;text-align:center; font-family: 'Fira Mono', monospace; font-size:15px; height: 40px;">
+			|||
+			<input type="number" name="second_number" placeholder="2nd number" style="border: solid 1px;
+    border-radius: 5px;text-align:center; font-family: 'Fira Mono', monospace; font-size:15px; height: 40px;">
 			<br>
 			<br>
-			<button type="submit" name="operation" value="addition">Add</button>
-			<button type="submit" name="operation" value="subtraction">Subtract</button>
-			<button type="submit" name="operation" value="division">Divide</button>
-			<button type="submit" name="operation" value="multiplication">Multiply</button>
+			<button type="submit" name="operation" value="addition" style="border: solid 1px;
+    border-radius: 5px;
+    background: cornflowerblue; margin: 5px;padding: 10px; font-size:16px; font-family:'Fira Sans',sans-serif">Add</button>
+			<button type="submit" name="operation" value="subtraction" style="border: solid 1px;
+    border-radius: 5px;
+    background: #79649f; margin: 5px;padding: 10px; font-size:16px; font-family:'Fira Sans',sans-serif">Subtract</button>
+			<button type="submit" name="operation" value="division" style="border: solid 1px;
+    border-radius: 5px;
+    background: #45aac8; margin: 5px;padding: 10px; font-size:16px; font-family:'Fira Sans',sans-serif">Divide</button>
+			<button type="submit" name="operation" value="multiplication" style="border: solid 1px;
+    border-radius: 5px;
+    background: #0ac7ff; margin: 5px;padding: 10px; font-size:16px; font-family:'Fira Sans',sans-serif">Multiply</button>
 		</form>
 
 	</body>
