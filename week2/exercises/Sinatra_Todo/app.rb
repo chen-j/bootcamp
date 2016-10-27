@@ -14,6 +14,10 @@ list.add_task(task_1)
 list.add_task(task_2)
 list.add_task(task_3)
 
+get "/" do
+	redirect("/tasks")
+end
+
 
 get "/tasks" do
 	@todos = list.tasks

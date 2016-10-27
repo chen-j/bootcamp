@@ -1,6 +1,6 @@
-<div>
+<div style="text-align: center;">
 <h2>Welcome to the Todo List</h2>
-<ul><% @todos.each do |task| %>
+<ul style="list-style: none;"><% @todos.each do |task| %>
  <% if task.completed == false %>
 <li>
 	<%= task.content %>
