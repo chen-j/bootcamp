@@ -1,4 +1,25 @@
-<h1>Tasks</h1>
-<ul>
-	<li><%= @the_todolist %></li>
-</ul>
+<div>
+<h2>Welcome to the Todo List</h2>
+<ul><% @todos.each do |task| %>
+ <% if task.completed == false %>
+<li>
+	<%= task.content %>
+	<form action="/complete" method="POST">
+	<input type="hidden" name="the_id" value="<%= task.id %>">
+	<button type="submit">Complete Task</button>
+	</form>
+</li>
+<% else %>
+<li style="text-decoration: line-through">
+	<%= task.content %>
+	<form action="/delete" method="POST">
+	<input type="hidden" name="the_id" value="<%= task.id %>">
+	<button type="submit">Delete Complete Task</button>
+	</form>
+</li>
+<% end %>
+
+<% end %></ul>
+
+<a href="/new_task">Add new task</a>
+</div>
