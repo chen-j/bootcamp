@@ -1,7 +1,6 @@
-#Inside of server.rb
 require 'sinatra'
 require 'sinatra/reloader'
-# We're going to need to require our class files
+
 require_relative('lib/Task.rb')
 require_relative('lib/TodoList.rb')
 
@@ -38,7 +37,6 @@ post "/complete" do
 end
 
 post "/delete" do
-	# task_td = list.find_task_by_id(params[:the_id].to_i)
 	list.delete_task(params[:the_id].to_i)
 	redirect("/tasks")
 end
