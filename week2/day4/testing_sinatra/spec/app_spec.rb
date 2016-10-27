@@ -32,5 +32,6 @@ describe "My Web App" do
 		follow_redirect!
 		expect(last_request.path).to eq("/real_page")
 	end
+	
 
 end
