@@ -1,12 +1,17 @@
-require_relative ("../lib/blog.rb")
+require_relative("../lib/blog.rb")
+require_relative("../lib/post.rb")
 
-RSpect.describe Blog do
+RSpec.describe Blog do
 	before(:each) do
 		@blog = Blog.new()
 	end
 
-	it ("#Posts returns list pf posts") do
-		expect(@blog.posts).to
+ 	describe "#blog_posts" do
+
+	it ("#returns list blog posts") do
+		expect(@blog.blog_posts).to eq([])
 	end
-	
+
+end
+
 end
