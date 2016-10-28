@@ -1,0 +1,13 @@
+<body style="width:60%; margin:auto;">
+<h3>Which movie was realeased in <%= @rand_year %>?</h3>
+	<% @movies.each do |movie| %>
+		<div>
+			<p><%= movie.title %></p>
+			<form action="/check_answer" method="POST">
+				<input type="hidden" name="correct_year" value="<%= @rand_year %>">
+				<input type="hidden" name="movie_year" value="<%= movie.year %>">
+				<button type="submit">This one</button>
+			</form>
+		</div>
+	<% end %>
+</body>
