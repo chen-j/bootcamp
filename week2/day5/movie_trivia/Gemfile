@@ -1,0 +1,5 @@
+source "https://rubygems.com"
+
+gem "sinatra"
+gem "imdb"
+gem "sinatra-contrib"
