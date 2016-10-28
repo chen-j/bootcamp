@@ -1,12 +1,17 @@
+<head>
+	<title>MT | Guess The Year</title>
+</head>
 <body style="width:85%; margin:25px auto;">
 <h3 style ="text-align:center;">Which movie was realeased in <span style="color:red;"><%= @rand_year %></span>?</h3>
+<div style= "margin:0px 28px;">
 	<% @movies.each do |movie| %>
 		<div>
 			<form action="/check_answer" method="POST">
 				<input type="hidden" name="correct_year" value="<%= @rand_year %>">
 				<input type="hidden" name="movie_year" value="<%= movie.year %>">
-				<button style="background: none; border: none; float:left; display:block; margin:auto;"  type="submit"><img src="<%= movie.poster %>" width="260px"></button>
+				<button style="background: none; border: none; float:left; display:block; margin:auto;"  type="submit"><img src="<%= movie.poster %>" width="330px" height= "450px"></button>
 			</form>
 		</div>
 	<% end %>
+</div>
 </body>
