@@ -1,3 +1,4 @@
+require "bundler/setup"
 require "sinatra"
 require "sinatra/reloader"
 require "imdb"
@@ -22,8 +23,8 @@ end
 
 post "/check_answer" do
   	if (params[:movie_year]) == (params[:correct_year])
-			redirect("http://www.techzim.co.zw")
+			"You got it"
 		else
-			redirect("https://ssn.co.zw")
+			"NOPE!!"
 		end
 end

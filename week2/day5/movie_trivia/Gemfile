@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
 gem "sinatra"
-gem "imdb"
+gem "imdb", git: "https://github.com/nickborbe/imdb.git" 
 gem "sinatra-contrib"

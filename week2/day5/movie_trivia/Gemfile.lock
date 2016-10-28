@@ -1,13 +1,18 @@
+GIT
+  remote: https://github.com/nickborbe/imdb.git
+  revision: d8e3895d4ffdfe6d482dc677754981568c7abeab
+  specs:
+    imdb (0.8.3)
+      nokogiri (= 1.6.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
     backports (3.6.8)
-    imdb (0.8.2)
-      nokogiri (= 1.6.2.1)
-    mini_portile (0.6.0)
+    mini_portile (0.6.2)
     multi_json (1.12.1)
-    nokogiri (1.6.2.1)
-      mini_portile (= 0.6.0)
+    nokogiri (1.6.5)
+      mini_portile (~> 0.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -30,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  imdb
+  imdb!
   sinatra
   sinatra-contrib
 
