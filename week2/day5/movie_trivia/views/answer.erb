@@ -1,0 +1,25 @@
+<head>
+	<head>
+		<title>MT | Guess The Year</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	</head>
+</head>
+<body class="container valign-wrapper">
+	<%if (params[:movie_year]) == (params[:correct_year]) %>
+		<div class="container valign center-align">
+			<h2>That's Correct!!!</h2>
+			<a href="/" class="waves-effect waves-light btn-large">Play Again</a>
+		</div>
+	<% else %>
+		<div class="container valign center-align">
+			<h2>Not Correct!!!</h2>
+			<button onclick="goBack()" class="waves-effect waves-light btn-large">Try Again</button>
+				  <script>
+							function goBack() {
+							    window.history.back();
+							}
+					</script>
+		</div>
+	<% end %>
+</body>

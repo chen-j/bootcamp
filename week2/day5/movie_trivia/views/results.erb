@@ -1,17 +1,27 @@
 <head>
 	<title>MT | Guess The Year</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </head>
-<body style="width:85%; margin:25px auto;">
-<h3 style ="text-align:center;">Which movie was realeased in <span style="color:red;"><%= @rand_year %></span>?</h3>
-<div style= "margin:0px 28px;">
+<body>
+<h4 class="z-depth-2 card-panel teal lighten-2" style ="text-align:center;">Which movie was released in <%= @rand_year %>?</h4>
+<div class="container">
+<div class="row">
 	<% @movies.each do |movie| %>
-		<div>
-			<form action="/check_answer" method="POST">
+			<form action="/check_answer" method="POST" class="col s4">
 				<input type="hidden" name="correct_year" value="<%= @rand_year %>">
 				<input type="hidden" name="movie_year" value="<%= movie.year %>">
-				<button style="background: none; border: none; float:left; display:block; margin:auto;"  type="submit"><img src="<%= movie.poster %>" width="330px" height= "450px"></button>
+				<button style="background: none; border: none; float:left; display:block; margin:auto; height:400px;" type="submit"><img src="<%= movie.poster %>" class="responsive-img hoverable"></button>
 			</form>
-		</div>
 	<% end %>
 </div>
+</div>
+<footer class="page-footer teal lighten-2">
+<div class="footer-copyright">
+            <div class="container">
+            Chen-J
+            <a class="grey-text text-lighten-4 right" href="/>Search Again</a>
+            </div>
+</div>
+</footer>
 </body>
