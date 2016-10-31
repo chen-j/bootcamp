@@ -5,7 +5,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </head>
 <body>
-<h4 class="z-depth-2 card-panel teal lighten-2" style ="text-align:center;">Which production was released in <%= @rand_year %>?</h4>
+<h4 class="z-depth-2 card-panel green lighten-2" style ="text-align:center;">Which production was released in <%= @rand_year %>?</h4>
 <div class="container">
 <div class="row">
 	<% @movies.each do |movie| %>
@@ -17,12 +17,4 @@
 	<% end %>
 </div>
 </div>
-<footer class="row page-footer teal lighten-2">
-<div class="footer-copyright">
-            <div class="container">
-            Chen-J
-            <a class="grey-text text-lighten-4 right" href="/"><i class="material-icons">search</i></a>
-            </div>
-</div>
-</footer>
 </body>
