@@ -1,0 +1,85 @@
+@font-face { font-family: ProximaNova; src: url('fonts/ProximaNova-Reg.otf'); }
+@font-face { font-family: ProximaNova; font-weight: light; src: url('fonts/ProximaNova-Light.otf'); }
+@font-face { font-family: ProximaNova; font-weight: bold; src: url('fonts/ProximaNova-SBold.otf');}
+
+body {
+	width: 100%;
+	margin:0px;
+}
+
+
+#frontpage {
+	background-image: url("images/family.jpg");
+	width: 100%;
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 680px;
+}
+
+#logo {
+
+}
+
+.sign_btn {
+	font-family: ProximaNova, sans-serif;
+	font-size: 20px;
+	color:white;
+	background-color: red;
+	border: none;
+	width: 120px;
+	height: 50px;
+	float: right;
+	margin-right: 30px;
+  margin-top: 35px;
+}
+
+#welcome-block {
+	margin: 150px auto;
+	font-family: ProximaNova, sans-serif;
+	font-weight: bold;
+	font-size: 57px;
+  background: rgba(0, 0, 0, 0.61);
+  width: 750px;
+  padding: 20px 20px 10px 20px;
+	color: #fff;
+}
+
+#welcome-block p {
+	margin-left: 40px;
+}
+
+#free-btn {
+	width: 250px;
+	margin: 0px 240px 20px;
+	padding: 10px;
+	font-family: ProximaNova, sans-serif;
+	font-size: 20px;
+	color: white;
+	background-color: #03A9F4;
+	border: none;
+}
+
+#new-releases {
+	width: 90%;
+	margin: auto;
+}
+
+.movie-poster {
+	width: 200px;
+  margin: 12px;
+  height: 300px;
+}
+
+#new-releases h3 {
+	font-family: ProximaNova, sans-serif;
+	font-size: 30px;
+  margin-top: 25px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+
+footer {
+	height: 75px;
+  background: black;
+  margin-top: 35px;
+}
