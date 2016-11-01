@@ -1,0 +1,86 @@
+@font-face { font-family: ProximaNova; src: url('fonts/ProximaNova-Reg.otf'); }
+@font-face { font-family: ProximaNova; font-weight: light; src: url('fonts/ProximaNova-Light.otf'); }
+@font-face { font-family: ProximaNova; font-weight: bold; src: url('fonts/ProximaNova-SBold.otf');}
+
+body {
+	width: 100%;
+	margin:0px;
+	font-family: ProximaNova, sans-serif;
+}
+
+#header {
+  background-color: black;
+	height: 70px;
+	width: 100%;
+	margin-bottom: -50px;
+}
+
+#container {
+	width: 80%;
+  margin: auto;
+}
+
+#logo {
+	height: 100px;
+	margin: -20px 540px
+}
+
+#movie-poster {
+	color: white;
+	background-image: url("images/landing.jpg");
+	width: 100%;
+	background-repeat:no-repeat;
+	background-size: cover;
+	height: 610px;
+}
+
+#movie-title {
+	font-family: ProximaNova, sans-serif;
+	font-size: 50px;
+	padding-top: 90px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#ratings {
+	margin-top: -50px;
+  margin-bottom: 10px;
+	width: 430px;
+	margin-left: -12px;
+}
+
+#movie-info {
+	display: inline;
+	/*width: 500px;*/
+	font-size: 22px;
+	line-height: 8px;
+}
+
+#play {
+	width: 140px;
+}
+
+#playimg {
+	width: 120px;
+  display: inline;
+  float: right;
+  margin-top: -90px;
+  margin-right: 390px;
+
+}
+
+#synop {
+	width: 42%;
+  font-size: 19px;
+	letter-spacing: 0.5px;
+}
+
+button {
+	width: 150px;
+	padding: 10px;
+	margin-top: 20px;
+	font-family: ProximaNova, sans-serif;
+	font-size: 15px;
+	color: #e50914;
+	background-color: #fbf8f9;
+	border: none;
+}
