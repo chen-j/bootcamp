@@ -9,4 +9,21 @@ code {
 
 header, section, aside, footer {
 	margin: 0 1.5% 24px 1.5%;
+	border: 1px solid black;
+}
+
+section {
+	position: absolute;
+	top:250px;
+	right:100px;
+}
+
+img {
+	width:200px;
+	height: 200px;
+	float: right;
+}
+
+.image-wrapper {
+	overflow: auto;
 }
