@@ -1,0 +1,65 @@
+body,
+html,
+.pizza-header {
+	height: 100% ;
+	margin: 0;
+}
+
+.pizza-header {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	background-image: url("https://media.giphy.com/media/BPofSmBGnwJIQ/giphy.gif");
+}
+
+h1 {
+	font-size: 30px;
+}
+
+/*###############################################
+-------Media Queries for H1 -----------
+###############################################*/
+
+@media screen and (min-width: 768px ){
+	h1 {
+		font-size: 50px;
+		color: blue;
+	}
+}
+
+@media screen and (min-width: 992px ){
+	h1 {
+		font-size: 70px;
+		color: red;
+	}
+}
+
+@media screen and (min-width: 1200px ){
+	h1 {
+		font-size: 100px;
+		color: green;
+	}
+}
+
+/*###############################################
+-------Media Queries for pizza-header-----------
+###############################################*/
+
+@media screen and (min-width: 768px ){
+	.pizza-header{
+		background-image: url("https://media.giphy.com/media/3oz8xvhl6mTmF4MJI4/giphy.gif")
+	}
+}
+
+@media screen and (min-width: 992px ){
+	.pizza-header{
+		background-image: url("https://media.giphy.com/media/eMeMQ0Y4DHS2k/giphy.gif")
+	}
+}
+
+@media screen and (min-width: 1200px ){
+	.pizza-header{
+		background-image: url("https://media.giphy.com/media/iThaM3NlpjH0Y/giphy.gif")
+	}
+}
