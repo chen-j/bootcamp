@@ -1,13 +1,4 @@
-def count_countries(country, array)
-	counter = 0
-	array.each do |each_country|
-		if each_country == country
-			counter +=1
-		end
-	end
-	counter
-end
-
+require_relative ("lib/country_counter.rb")
 
 countries = ["Puerto Rico","Puerto Rico",
 	"USA","USA","USA","USA","USA",
@@ -15,12 +6,13 @@ countries = ["Puerto Rico","Puerto Rico",
 	"Cuba","Cuba","Cuba","Cuba",
 	"Nigeria", "Haiti"]
 
+country_thing = CountryCounter.new
 
-p count_countries("USA", countries) == 5
-p count_countries("Puerto Rico", countries) == 2
-p count_countries("Cuba", countries) == 4
-p count_countries("Nicaragua", countries) == 1
-p count_countries("Japan", countries) == 0
+p country_thing.count_countries("USA", countries) == 5
+p country_thing.count_countries("Puerto Rico", countries) == 2
+p country_thing.count_countries("Cuba", countries) == 4
+p country_thing.count_countries("Nicaragua", countries) == 1
+p country_thing.count_countries("Japan", countries) == 0
 
 
 puts ""

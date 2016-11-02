@@ -1,14 +1,5 @@
-function countCountries(country, array) {
-	var counter = 0;
 
-	array.forEach(function(eachCountry) {
-		if (eachCountry === country){
-			counter +=1;
-		}
-	});
-	return counter;
-}
-
+var countCountriesFn = require("./lib/count_countries.js");
 
 var countries = ["Puerto Rico","Puerto Rico",
 	"USA","USA","USA","USA","USA",
@@ -18,11 +9,11 @@ var countries = ["Puerto Rico","Puerto Rico",
 
 
 
-console.log(countCountries("USA", countries) === 5);
-console.log(countCountries("Puerto Rico", countries) === 2);
-console.log(countCountries("Cuba", countries) === 4);
-console.log(countCountries("Nicaragua", countries) === 1);
-console.log(countCountries("Japan", countries) === 0);
+console.log(countCountriesFn("USA", countries) === 5);
+console.log(countCountriesFn("Puerto Rico", countries) === 2);
+console.log(countCountriesFn("Cuba", countries) === 4);
+console.log(countCountriesFn("Nicaragua", countries) === 1);
+console.log(countCountriesFn("Japan", countries) === 0);
 
 // countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"]
 
