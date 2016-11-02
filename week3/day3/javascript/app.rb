@@ -8,3 +8,15 @@ countries.each do |a_country|
 end
 
 puts ""
+
+
+uppercase_countries = countries.map do |a_country|
+	a_country.upcase
+end
+
+puts "COUNTRIES REPRESENTED IN THIS ROOM:"
+puts "-----------------------------------"
+
+uppercase_countries.each do |a_country|
+	puts "SOME OF US ARE FROM #{a_country}!!"
+end
