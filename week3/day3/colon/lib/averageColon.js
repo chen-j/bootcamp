@@ -1,4 +1,7 @@
 function averageColon(numbersString) {
+	if (numbersString === undefined){
+		return 0;
+	} else {
 	var arrayNumbers = numbersString.split(/\D/);
 	for (var i = 0; i < arrayNumbers.length; i++) {
 		arrayNumbers[i] = Number(arrayNumbers[i]);
@@ -8,6 +11,7 @@ function averageColon(numbersString) {
 	});
   var avg = sum/arrayNumbers.length;
 	return avg;
+	};
 };
 
 module.exports = averageColon;
