@@ -23,11 +23,14 @@ function fileActions(err, file){
 				console.log(`Title: ${episode.title}`);
 				console.log(`Description: ${episode.description}`);
 				console.log(`Rating: ${episode.rating}   ${stars}`);
+				console.log(`Episode: ${episode.episode_number}`);
 				console.log("----------------------");
 		});
 
-////////////////////   Filtered    //////////////////////////
 
+////////////////////   Filtered    //////////////////////////
+		console.log("");
+		console.log("");
 		filteredRatings.forEach(function (episode) {
 				var star = "*";
 				var stars = star.repeat(Math.round(episode.rating));
@@ -38,11 +41,13 @@ function fileActions(err, file){
 		});
 
 /////////////////     Find Snow    //////////////////////////
-
+		console.log("Find Snow");
 		episodes.forEach (function (episode) {
 			var desc = episode.description;
 			var findSnow = desc.indexOf("Jon");
-			console.log(findSnow);
+			console.log("");
+			console.log(`Episode: ${episode.episode_number}`);
+			console.log(`Jon is mentioned in the description at index ${findSnow}`);
 		});
 
 }
