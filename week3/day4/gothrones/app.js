@@ -15,6 +15,19 @@ function fileActions(err, file){
 
 		var filteredRatings = episodes.filter(highRating);
 
+/////////////////////      Ordered	//////////////////////////
+
+		episodes.forEach(function (episode) {
+				var star = "*";
+				var stars = star.repeat(Math.round(episode.rating));
+				console.log(`Title: ${episode.title}`);
+				console.log(`Description: ${episode.description}`);
+				console.log(`Rating: ${episode.rating}   ${stars}`);
+				console.log("----------------------");
+		});
+
+////////////////////   Filtered    //////////////////////////
+
 		filteredRatings.forEach(function (episode) {
 				var star = "*";
 				var stars = star.repeat(Math.round(episode.rating));
@@ -22,6 +35,14 @@ function fileActions(err, file){
 				console.log(`Description: ${episode.description}`);
 				console.log(`Rating: ${episode.rating}   ${stars}`);
 				console.log("----------------------");
+		});
+
+/////////////////     Find Snow    //////////////////////////
+
+		episodes.forEach (function (episode) {
+			var desc = episode.description;
+			var findSnow = desc.indexOf("Jon");
+			console.log(findSnow);
 		});
 
 }
