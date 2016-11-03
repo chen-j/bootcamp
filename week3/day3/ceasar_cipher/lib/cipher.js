@@ -32,7 +32,7 @@ function ceasarCipher(input, shiftSize) {
                 var eqUnciphered = String.fromCharCode(unciphered);
                 cipherText.push(eqUnciphered);
                 };
-        } else if (letter === ' ' || letter === '?' || letter === ',' || letter === '.' || letter === '"') {
+        } else if (letter < "A" || (letter > "Z" && letter < "a") || letter > "z") {
             cipherText.push(letter);
         } else {
             cipherText.push(unciphered);
