@@ -21,17 +21,17 @@ function ceasarCipher(input, shiftSize) {
         if (isUpperCase || isLowerCase) {
             var unciphered = letter.charCodeAt(0) + shift;
             if ((isUpperCase && unciphered > "Z".charCodeAt(0)) || (isLowerCase && unciphered > "z".charCodeAt(0))) {
-            var overFlow = unciphered - 26;
-            var eqUncipheredOver = String.fromCharCode(overFlow);
-               cipherText.push(eqUncipheredOver);
-               } else if ((isUpperCase && unciphered < "A".charCodeAt(0)) || (isLowerCase && unciphered < "a".charCodeAt(0))) {
+                var overFlow = unciphered - 26;
+                var eqUncipheredOver = String.fromCharCode(overFlow);
+                cipherText.push(eqUncipheredOver);
+            } else if ((isUpperCase && unciphered < "A".charCodeAt(0)) || (isLowerCase && unciphered < "a".charCodeAt(0))) {
                 var underFlow = 26 - unciphered;
                 var eqUncipheredUnder = String.fromCharCode(underFlow);
                 cipherText.push(eqUncipheredUnder);
-                } else {
+            } else {
                 var eqUnciphered = String.fromCharCode(unciphered);
                 cipherText.push(eqUnciphered);
-                };
+            };
         } else if (letter < "A" || (letter > "Z" && letter < "a") || letter > "z") {
             cipherText.push(letter);
         } else {
