@@ -4,7 +4,18 @@ function fileActions(err, file){
         throw err;
     }
     var episodes = JSON.parse(file);
-		episodes.forEach(function (episode) {
+
+		var sortedEpisodes = episodes.sort(function(a,b){
+			return a.episode_number - b.episode_number
+		});
+
+		function highRating(episode) {
+			return episode.rating > 8.5;
+		}
+
+		var filteredRatings = episodes.filter(highRating);
+
+		filteredRatings.forEach(function (episode) {
 				var star = "*";
 				var stars = star.repeat(Math.round(episode.rating));
 				console.log(`Title: ${episode.title}`);
@@ -14,4 +25,5 @@ function fileActions(err, file){
 		});
 
 }
+
 fs.readFile("./lib/got.json", 'utf8', fileActions);
