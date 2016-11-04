@@ -5,8 +5,8 @@ class Viking {
 		this.strength = strength;
 	}
 
-	attack(anotherViking){
-		return anotherViking.health - this.strength;
+	attack(opponent){
+		return opponent.health - this.strength;
 	}
 }
 
