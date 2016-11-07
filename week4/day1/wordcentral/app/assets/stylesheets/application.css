@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+
+body {
+	width: 65%;
+	margin: auto;
+	font-family: 'Fira Mono', monospace;
+}
