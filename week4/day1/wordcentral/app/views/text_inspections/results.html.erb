@@ -5,3 +5,10 @@
 
 <h3>Your text has <%= @word_count %> words</h3>
 <h3>It takes about <%= @time_reading %> seconds to read your text</h3>
+<p>The words listed below appear the most in your text</p>
+
+<ul>
+<% @overused.take(10).each do |word| %>
+	<li><%=word%></li>
+<%end%>
+</ul>
