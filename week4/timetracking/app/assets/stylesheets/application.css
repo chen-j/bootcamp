@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+
+body {
+	width: 70%;
+	margin: auto;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
