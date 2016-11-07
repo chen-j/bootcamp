@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
 		post "/asciis", to: "asciis#create"
 
+		get "/text_generator/new", to: "text_generator#new"
+
 end
