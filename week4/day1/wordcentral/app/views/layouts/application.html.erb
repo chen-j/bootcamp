@@ -9,7 +9,12 @@
   </head>
 
   <body>
-		<%= render "partials/navigation" %>
-    <%= yield %>
+		<header>
+			<h3>WordCentral</h3>
+			<%= render "partials/navigation" %>
+		</header>
+		<section>
+			<%= yield %>
+		</section>
   </body>
 </html>

@@ -23,11 +23,41 @@ body {
 	font-family: 'Fira Mono', monospace;
 }
 
+header {
+	border-bottom: 3px solid #6ab3bf;
+	padding-bottom: 10px;
+}
+
+header h3 {
+	display: inline;
+}
+
+header a {
+	text-decoration: none;
+	color: #6ab3bf;
+}
+
+nav {
+	display: inline;
+	float: right;
+}
+
 nav a {
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
 form {
-	padding: 30px;
+	padding-top: 30px;
+}
+
+button {
+	background: #6ab3bf;
+	border: none;
+	padding: 5px;
+	color: black;
+	border-radius: 4px;
+	font-size: large;
+	font-family: 'Fira Mono', monospace;
+	margin-top: 10px;
 }
