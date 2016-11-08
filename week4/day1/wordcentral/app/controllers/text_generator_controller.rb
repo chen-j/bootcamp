@@ -24,6 +24,7 @@ class TextGeneratorController < ApplicationController
 				@output.push(quote.split(" ").sample)
 				i += 1
 			end
+			@output[0] = @output[0].capitalize
 		end
 			render "results"
 	end
