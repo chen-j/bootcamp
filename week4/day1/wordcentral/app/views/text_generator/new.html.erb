@@ -1,0 +1,12 @@
+<form action="/text_generator" method="post">
+	<div>
+		<input type="hidden" name="authenticity_token"value="<%= form_authenticity_token %>">
+		<label for="count">Number</label>
+		<input type="number" name="count" id="count">
+		<label for="p_count">Paragraphs</label>
+		<input type="radio" name="content" value="paragraphs" id="p_count">
+		<label for="w_count">Words</label>
+		<input type="radio" name="content" value="words" id="w_count">
+	</div>
+	<button type="submit">Submit text</button>
+</form>

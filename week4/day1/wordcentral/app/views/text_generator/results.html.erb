@@ -1,0 +1,13 @@
+<% if @content_type == "paragraphs" %>
+		<% @output.each do |output| %>
+			<p>
+				<%= output %>
+			</p>
+		<% end %>
+<% elsif @content_type == "words" %>
+		<p>
+				<% @output.each do |output| %>
+						<%= output %>
+				<% end %>
+		</p>
+<% end %>

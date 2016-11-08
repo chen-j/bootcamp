@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
 		get "/text_generator/new", to: "text_generator#new"
 
+		post "/text_generator", to: "text_generator#create"
+
 end
