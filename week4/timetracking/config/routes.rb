@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
 	get "/", to: "site#home"
 
+	get "/projects", to: "projects#index"
+
 	get "/contact", to: "site#contact"
 
 	get "/say_name/:name", to: "site#say_name"
@@ -10,5 +12,6 @@ Rails.application.routes.draw do
 	get "/calculator", to: "calculator#add_form"
 
 	post "/calculate", to: "calculator#process_addition"
+
 
 end
