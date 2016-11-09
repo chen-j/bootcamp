@@ -1,9 +1,5 @@
-<form method="get" action="/search">
-	<input type="text" name="search_term">
-	<button type="submit">Search</button>
-</form>
-
-<% @contacts.each do |a_contact| %>
+<h3>Search Results</h3>
+<% @results.each do |a_contact| %>
 	<p>
 		<a href="/contacts/<%= a_contact.id %>"><%= a_contact.name %></a>
 		<% if a_contact.favorite == false %>

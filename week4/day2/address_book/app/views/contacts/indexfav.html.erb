@@ -1,0 +1,4 @@
+<h4>Favorites</h4>
+<% @favcontacts.each do |fav| %>
+<p><a href="/contacts/<%= fav.id %>"><%= fav.name %></a></p>
+<% end %>
