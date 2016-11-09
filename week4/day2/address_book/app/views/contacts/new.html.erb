@@ -21,6 +21,11 @@
     <label for="contact_email">Email</label>
     <input type="text" name="contact[email]" id="contact_email">
   </div>
+	<div>
+    <label for="contact_avatar">Email</label>
+    <input type="file" name="contact[avatar]"  id="contact_avatar" onchange="fileSelected();">
+  </div>
+
 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
 	<button type="submit">Add this contact</button>
