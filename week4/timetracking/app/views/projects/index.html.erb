@@ -5,6 +5,9 @@
 				<% if project.description.present? %>
 					 – <%= project.description %>
 				<% end %>
+				<% if project.time_entries.present? %>
+					<%= link_to "See time entries", project_time_entries_path(project)  %>
+				<% end %>
 			</li>
 	<% end %>
 </ul>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
 	get "/projects/:id", to: "projects#show", as: "project"
 
-	get "/projects/:id/time_entries", to: "time_entries#index"
+	get "/projects/:project_id/time_entries", to: "time_entries#index", as: "project_time_entries" 
 
 	get "/contact", to: "site#contact"
 
