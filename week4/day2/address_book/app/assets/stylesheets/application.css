@@ -42,3 +42,19 @@ nav {
 nav a {
 	text-decoration: none;
 }
+
+#details {
+	width: 50%;
+	margin: auto;
+	padding-top: 40px;
+}
+
+#avatar {
+	display: inline;
+	padding-top: 20px;
+}
+
+#contact-info {
+	display: inline;
+	float: right;
+}

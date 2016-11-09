@@ -1,5 +1,11 @@
-<%= image_tag @contact.avatar.url(:thumb) %>
+<div id = "details">
+<div id="avatar">
+	<%= image_tag @contact.avatar.url(:thumb) %>
+</div>
+<div id="contact-info">
 <h4><%= @contact.name %></h4>
 <p><%= @contact.phone_number %></p>
 <p><%= @contact.address %></p>
 <p><%= @contact.email %></p>
+</div>
+</div>
