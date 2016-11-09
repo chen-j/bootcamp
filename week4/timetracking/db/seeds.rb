@@ -15,3 +15,11 @@ projectG = Project.create!(name: "Coding Dojo")
 projectH = Project.create!(name: "Facebook")
 projectI = Project.create!(name: "Instagram")
 projectJ = Project.create!(name: "Electron")
+
+
+TimeEntry.create(hours: 2, minutes: 30, comments: "stuff", date: Date.today, project: projectA)
+TimeEntry.create(hours: 4, minutes: 41, comments: "stuff", date: Date.today-2, project: projectA)
+TimeEntry.create(hours: 5, minutes: 39, comments: "stuff", date: Date.today-5, project: projectB)
+TimeEntry.create(hours: 1, minutes: 23, comments: "stuff", date: Date.today-1, project: projectB)
+TimeEntry.create(hours: 6, minutes: 35, comments: "stuff", date: Date.today-10, project: projectB)
+TimeEntry.create(hours: 8, minutes: 20, comments: "stuff", date: Date.today-20, project: projectC)
