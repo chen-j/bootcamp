@@ -6,6 +6,7 @@
 			<%= entry.hours %> Hrs
 			<%= entry.minutes %> mins -
 			<%= entry.date %>
+			<%= link_to "Edit", edit_project_time_entry_path(@my_project,entry) %>
 		</li>
 	<% end %>
 </ul>
