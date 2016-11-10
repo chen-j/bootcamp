@@ -1,0 +1,8 @@
+<% @users.each do |one_user| %>
+	<li>
+		<%= one_user.name %>
+		<% if one_user.products.present? %>
+		<%= link_to "See User Products", user_products_path(one_user)%>
+		<% end %>
+	</li>
+<% end %>

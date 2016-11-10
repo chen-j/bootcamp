@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+userA = User.create(name:"Chenje", email:"ck@example.io")
+userB = User.create(name:"Thomas", email:"tom@example.io")
+userC = User.create(name:"Richard", email:"rick@example.io")
+userD = User.create(name:"John", email:"j@example.io")
+userE = User.create(name:"Watson", email:"wat@example.io")
+userF = User.create(name:"Donald", email:"don@example.io")
+
+Product.create(name:"MacBook Pro", price:1700, user: userA)
+Product.create(name:"Lenovo Yoga", price:900, user: userA)
+Product.create(name:"Surface Book", price:1300, user: userA)
+Product.create(name:"Lenovo Thinkpad", price:1000, user: userA)
