@@ -1,0 +1,11 @@
+<%= form_for [@my_project, @my_entry] do |f| %>
+	<%= f.label :hours, class: "control-label" %>
+	<%= f.text_field :hours, class: "form-control" %>
+	<%= f.label :minutes, class: "control-label" %>
+	<%= f.text_field :minutes, class: "form-control" %>
+	<%= f.label :date, class: "control-label" %>
+	<%= f.date_select :date, class: "form-control" %>
+	<%= f.label :comments, class: "control-label" %>
+	<%= f.text_area :comments, class: "form-control" %>
+	<%= f.button %>
+<% end %>
