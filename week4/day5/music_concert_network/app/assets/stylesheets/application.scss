@@ -13,4 +13,16 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+#main {
+     padding-top: 10px;
+ }
+
+
+.navbar-brand {
+     font-family: 'Abril Fatface', cursive;
+     color: rgba(154, 67, 187, 0.9)!important;
+     font-size: 25px !important;
+ }

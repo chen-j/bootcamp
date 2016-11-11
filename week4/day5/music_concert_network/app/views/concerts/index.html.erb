@@ -1,6 +1,16 @@
-<% @concerts.each do |concert| %>
-<p>
-    <%= concert.artist %> at <%= concert.venue %> on <%= concert.date  %>
-</p>
-<% end %>
-<%= link_to "Add New Concert", new_concert_path%>
+<div class="col-sm-8">
+    <% @concerts.each do |concert| %>
+    <p>
+        <%= concert.artist %> at <%= concert.venue %> on <%= concert.date  %>
+    </p>
+    <% end %>
+</div>
+
+
+<div class="col-sm-4">
+        <% @concerts_today.each do |concert| %>
+        <p>
+            <%= concert.artist %> at <%= concert.venue %>
+        </p>
+        <% end %>
+</div>
