@@ -1,16 +1,18 @@
 <div class="col-sm-8">
+    <h3>On This Month</h3>
     <% @concerts.each do |concert| %>
     <p>
-        <%= concert.artist %> at <%= concert.venue %> on <%= concert.date  %>
+        <%= link_to "#{concert.artist } at #{concert.venue} on #{concert.date}", concert_path(concert.id) %>
     </p>
     <% end %>
 </div>
 
 
 <div class="col-sm-4">
+        <h3>On Today</h3>
         <% @concerts_today.each do |concert| %>
         <p>
-            <%= concert.artist %> at <%= concert.venue %>
+            <%= link_to "#{concert.artist } at #{concert.venue}", concert_path(concert.id) %>
         </p>
         <% end %>
 </div>

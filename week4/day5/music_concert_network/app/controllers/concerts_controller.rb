@@ -1,13 +1,15 @@
 class ConcertsController < ApplicationController
 
     def index
-      @concerts = Concert.all
-      @concerts_today = Concert.all
+       @concerts_today = Concert.where(date: DateTime.now.to_date..Date.tomorrow)
+       @concerts = Concert.where(date: Date.tomorrow..Date.today.end_of_month)
       render "index"
     end
 
     def show
       @concert = Concert.find(params[:id])
+      @comments = @concert.comments
+      @new_comment = Comment.new
       render "show"
     end
 
@@ -17,14 +19,14 @@ class ConcertsController < ApplicationController
     end
 
     def create
-        @new_concert = Concert.new(entry_params)
+        @new_concert = Concert.new(concert_params)
         @new_concert.save
         redirect_to "/"
     end
 
     private
 
-    def entry_params
+    def concert_params
         params.require(:concert).permit(:artist, :venue, :city, :date, :description, :price)
     end
 end

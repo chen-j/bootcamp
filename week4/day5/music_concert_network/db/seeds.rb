@@ -12,3 +12,7 @@ concert3 = Concert.create(artist: "Killer T",venue: "Arena",city: "Gweru",date: 
 concert4 = Concert.create(artist: "Beyonce",venue: "McCamish Pavillion",city: "Atlanta",date: Date.today+23 ,description: "The best I never had", price: 5 )
 concert5 = Concert.create(artist: "Mafikizolo",venue: "Newlands Stadium",city: "Cape Town",date: Date.today+10 ,description: "Two bho bho", price: 105 )
 concert6 = Concert.create(artist: "Sauti Soul",venue: "Nairobi Serena",city: "Nairobi",date: Date.today+50 ,description: "Sura yako muzuri mama", price: 25 )
+
+Comment.create(feedback: "Definitely going", email: "first@concert.com", concert_id: 1)
+Comment.create(feedback: "Me too", email: "second@concert.com", concert_id: 1)
+Comment.create(feedback: "Going too", email: "third@concert.com", concert_id: 1)

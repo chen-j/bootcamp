@@ -1,0 +1,37 @@
+
+<div class="row">
+<div class="col-sm-7">
+    <h3><%= @concert.artist %></h3>
+    <h5><%= @concert.venue %> in <%= @concert.city %></h5>
+    <h5>$<%= @concert.price %></h5>
+</div>
+
+<div class="col-sm-5">
+    <p>
+        <%= @concert.description %>
+    </p>
+</div>
+</div>
+
+<br>
+<!-- <div class="container"> -->
+<div class="col-sm-5">
+    <h2>Comments</h2>
+
+    <%= render "comments/comment" %>
+
+</div>
+<div class="col-sm-7" id="comments">
+<% @comments.each do |comment| %>
+    <div class="media">
+              <div class="media-left">
+                  <p class="media-object" ></p>
+              </div>
+              <div class="media-body">
+                <h5 class="media-heading"><%= comment.email %></h5>
+                <p><%= comment.feedback %></p>
+                <hr>
+              </div>
+    </div>
+<% end %>
+</div>

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get "/", to: "concerts#index"
 
-  resources "concerts"
+  resources "concerts" do
+      resources "comments"
+  end
 
 end
