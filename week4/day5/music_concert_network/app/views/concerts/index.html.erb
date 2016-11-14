@@ -1,10 +1,23 @@
 <div class="col-sm-8">
     <h3>On This Month</h3>
     <% @concerts.each do |concert| %>
-    <p>
-        <%= image_tag (concert.poster.url(:thumb)) %>
-        <%= link_to "#{concert.artist } at #{concert.venue} on #{concert.date}", concert_path(concert.id) %>
-    </p>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <%= image_tag (concert.poster.url(:thumb)) %>
+        </div>
+        <div class="col-sm-9">
+            <%= concert.artist %><br>
+            <%= concert.venue %><br>
+            <%= concert.city %><br>
+            <%= concert.date.to_date %><br>
+            <br>
+            <%= link_to "Concert Details", concert_path(concert.id) %>
+        </div>
+        <div class="col-sm-12">
+            <hr>
+        </div>
+    </div>
     <% end %>
 </div>
 

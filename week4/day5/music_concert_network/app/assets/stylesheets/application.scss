@@ -15,6 +15,7 @@
  */
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,700');
 
 #main {
      padding-top: 10px;
@@ -22,16 +23,9 @@
 
 
 .navbar-brand {
-     font-family: 'Abril Fatface', cursive;
-     color: rgba(154, 67, 187, 0.9)!important;
+     font-family: 'Catamaran', sans-serif;
+     color: #2D3047!important;
      font-size: 25px !important;
- }
+     font-weight: 900;
 
-
-
- comments {
-    background-color: #f0f8ff;
-    border: solid 2px #7cbbea;
-    border-radius: 10px;
-    padding: 2%;
  }
