@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111214338) do
+ActiveRecord::Schema.define(version: 20161114010706) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "feedback"
@@ -27,8 +27,12 @@ ActiveRecord::Schema.define(version: 20161111214338) do
     t.datetime "date"
     t.string   "description"
     t.integer  "price"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
 end

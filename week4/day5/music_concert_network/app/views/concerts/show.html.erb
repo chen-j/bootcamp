@@ -1,15 +1,19 @@
 
 <div class="row">
-    <div class="col-sm-7">
+    <div class="col-sm-5">
         <h3><%= @concert.artist %></h3>
         <h5><%= @concert.venue %> in <%= @concert.city %></h5>
         <h5>$<%= @concert.price %></h5>
     </div>
 
-    <div class="col-sm-5">
+    <div class="col-sm-4">
         <p>
             <%= @concert.description %>
         </p>
+    </div>
+
+    <div class="col-sm-3">
+        <%= image_tag (@concert.poster.url(:medium)) %>
     </div>
 </div>
 
