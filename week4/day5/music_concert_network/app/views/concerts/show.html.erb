@@ -1,20 +1,21 @@
 
 <div class="row">
-    <div class="col-sm-5">
+    <br>
+    <div class="col-sm-3">
+        <%= image_tag (@concert.poster.url(:medium)) %>
+    </div>
+
+    <div class="offset-sm-4 col-sm-5">
         <h3><%= @concert.artist %></h3>
         <h5><%= @concert.venue %> in <%= @concert.city %></h5>
         <h5>$<%= @concert.price %></h5>
-    </div>
-
-    <div class="col-sm-4">
+        <br>
+        <br>
         <p>
             <%= @concert.description %>
         </p>
     </div>
-
-    <div class="col-sm-3">
-        <%= image_tag (@concert.poster.url(:medium)) %>
-    </div>
+    <hr class="col-sm-12">
 </div>
 
 <br>
@@ -26,17 +27,14 @@
     </div>
 
     <div class="col-sm-7" id="comments">
-        <% @comments.each do |comment| %>
-            <div class="media">
-                      <div class="media-left">
-                          <p class="media-object" ></p>
-                      </div>
-                      <div class="media-body">
-                        <h5 class="media-heading"><%= comment.email %></h5>
-                        <p><%= comment.feedback %></p>
-                        <hr>
-                      </div>
-            </div>
-        <% end %>
+            <% @comments.each do |comment| %>
+                <div class="media">
+                          <div class="media-body">
+                            <h5 class="media-heading"><%= comment.email %></h5>
+                            <p><%= comment.feedback %></p>
+                            <hr>
+                          </div>
+                </div>
+            <% end %>
     </div>
 </row>
