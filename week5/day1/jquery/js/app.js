@@ -2,6 +2,15 @@ console.log("CONSOLE LOG");
 
 $(document).ready(function() {
 
+
+    $(".js-fade-btn").on("click", function(){
+        $(".main").fadeToggle(5000);
+    });
+
+    $(".js-unicorn-btn").on("click", function(){
+        $(".main, p , h1").toggleClass("unicorn-mode")
+    })
+
     $(".js-pizza").on("click", function() {
         $(".empanadas").remove();
     });
@@ -20,7 +29,7 @@ $(document).ready(function() {
     $(".js-button-thing").on("click", function(){
         $(".container").prepend (`<img src="images/unicorns1.gif">`)
 
-    $("#ice-cream").on("click", iceCreamMessage);
+    $("#ice-cream").on("click", iceCreamMessage());
 
     });
 
