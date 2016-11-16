@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+.artist-modal-album {
+    height: 300px;
+    overflow: hidden;
+}
+
+.intro {
+    color: #27a527;
+    font-size: larger;
+}
+
+.form-control:focus {
+    color: #55595c;
+    background-color: #fff;
+    border-color: #27a527;
+    outline: none;
+}
+
+a{
+    color: #27a527 !important;
+    text-decoration: none !important;
+}

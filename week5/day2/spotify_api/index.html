@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spompler |Spotify Sampler</title>
+        <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
+        <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col-sm-3">
+                    <img class="col-sm-8 offset-sm-2 img-fluid" src="images/Radio.jpg">
+                </div>
+                <p class="intro col-sm-8 offset-sm-1 align-middle">Search for artists listed on Spotify using the form below. Then, click on any artist's image to reveal their albums. Clicking on any of the artist's albums will reveal that particular album's tracklist which you can then sample by clicking on any song in the tracklist.
+            </div>
+            <br>
+            <div class="row">
+                <form class="js-search-form">
+                    <div class="col-sm-8">
+                        <input type="text" class="js-search-term  form-control" placeholder="What do you want to search for?">
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-outline-success btn-block">Search</button>
+                    </div>
+                </form>
+            </div>
+            <br>
+            <br>
+            <div class="js-search-results row">
+
+            </div>
+<!-- ############################# Album Modal ############################ -->
+            <div class="modal fade" id="albumsModal">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Artist Albums</h4>
+                  </div>
+                  <div class="js-album-modal modal-body row">
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal">Close</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+<!-- ############################### -->
+
+            <div class="modal fade" id="tracksModal">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="js-album-title modal-title">Album Tracks</h4>
+                  </div>
+                  <div class="js-tracks-modal modal-body row">
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-success" data-dismiss="modal">Close</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+
+<!-- ############################### -->
+        </div>
+
+    </body>
+</html>
