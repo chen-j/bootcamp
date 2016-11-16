@@ -72,9 +72,7 @@ function showAlbums(response) {
         var albumResult = `<div class="col-sm-4 artist-modal-album" data-album-name=${album.name}
         data-album-id=${album.id} data-toggle="modal" data-target="#tracksModal">
         <div>${album.name}</div>
-        <div>
-        <img class="img-fluid" src = "${albumImage}">
-        </div>
+            <img class="js-album-image center-block img-fluid" src = "${albumImage}">
         </div>`;
         $(".js-album-modal").append(albumResult);
     })
@@ -103,9 +101,9 @@ function showTracks(response) {
     var albumTracks = response.items;
     albumTracks.forEach(function(track) {
         var singleTrack = `<div class="container">
-        <p class="btn btn-outline-success col-sm-6" style="text-align:left;">${track.name}</p>
-        <p class="btn btn-outline-success col-sm-2 offset-sm-1"><a href="${track.preview_url}" target="_blank">Preview</p>
-        <a href="${track.external_urls.spotify}" target="_blank" class="btn btn-outline-success col-sm-2 offset-sm-1">Play on Spotify</a>
+        <div><iframe class="js-embed col-sm-12" src="https://open.spotify.com/embed/track/${track.id}"></iframe></div>
+        <p class="btn btn-outline-success col-sm-2 offset-sm-3"><a href="${track.preview_url}" target="_blank">Preview</p>
+        <a href="${track.external_urls.spotify}" target="_blank" class="btn btn-outline-success col-sm-2 offset-sm-2">Play on Spotify</a>
         </div>`
         // $(".js-album-title").html(`${albumName}`)
         $(".js-tracks-modal").append(singleTrack);
