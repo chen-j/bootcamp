@@ -103,7 +103,7 @@ function showTracks(response) {
     var albumTracks = response.items;
     albumTracks.forEach(function(track) {
         var singleTrack = `<div class="container">
-        <p class="btn btn-outline-success col-sm-6">${track.name}</p>
+        <p class="btn btn-outline-success col-sm-6" style="text-align:left;">${track.name}</p>
         <p class="btn btn-outline-success col-sm-2 offset-sm-1"><a href="${track.preview_url}" target="_blank">Preview</p>
         <a href="${track.external_urls.spotify}" target="_blank" class="btn btn-outline-success col-sm-2 offset-sm-1">Play on Spotify</a>
         </div>`
