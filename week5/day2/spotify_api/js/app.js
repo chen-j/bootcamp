@@ -70,7 +70,7 @@ function showAlbums(response) {
             albumImage = album.images[0].url;
         };
         var albumResult = `<div class="col-sm-4 artist-modal-album" data-album-name=${album.name}
-        data-album-id=${album.id} data-toggle="modal" data-target="#tracksModal">
+        data-album-id=${album.id} data-toggle="modal" data-target="#tracksModal" >
         <div>${album.name}</div>
             <img class="js-album-image center-block img-fluid" src = "${albumImage}">
         </div>`;
@@ -84,7 +84,8 @@ function showAlbums(response) {
 
 
 function albumTracks() {
-    var albumId = $(this).data("album-id")
+
+    var albumId = $(this).data("album-id");
     $.ajax({
         url: `https://api.spotify.com/v1/albums/${albumId}/tracks`,
         type: 'GET',
@@ -94,6 +95,7 @@ function albumTracks() {
 }
 
 function showTracks(response) {
+    // $("#albumsModal").modal("hide");
     $(".js-tracks-modal").empty();
     console.log(response);
     var albumName = $(".artist-modal-album").data("album-name");
@@ -108,4 +110,11 @@ function showTracks(response) {
         // $(".js-album-title").html(`${albumName}`)
         $(".js-tracks-modal").append(singleTrack);
     });
+
+    if ($(".container").hasID('albumsModal')) {
+        $("#albumsModal").modal("hide");
+    } else {
+        $("#albumsModal").modal("show");
+    }
+
 }
