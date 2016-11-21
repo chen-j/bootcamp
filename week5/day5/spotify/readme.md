@@ -1,5 +1,4 @@
 # Spotify Player
 
-This is the skeleton to start implementing the Spotify Player!
-
-Happy coding!
+A music player using Spotify's API with jQuery to preview the first
+song retrieved from a search query.
