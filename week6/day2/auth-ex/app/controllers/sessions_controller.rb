@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
     def new
-      render :new
+        if session[:user_id]
+            redirect_to "/"
+        else
+            render :new
+        end
     end
 
     def create
@@ -11,5 +15,10 @@ class SessionsController < ApplicationController
           session[:user_id] = user_maybe.id
           redirect_to "/"
       end
+    end
+
+    def destroy
+        session.clear
+        redirect_to "/"
     end
 end
