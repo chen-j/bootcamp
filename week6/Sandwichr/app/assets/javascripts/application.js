@@ -14,3 +14,39 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $(".js-add-ingredient").on("click", addIngredient );
+});
+
+function addIngredient() {
+    console.log("It works");
+    var ingredient_id = $(this).data("ingredient-id");
+    var sandwich_id = $(".sandwich-name").data("sandwich-id");
+    var form = new FormData();
+    form.append("ingredient_id", ingredient_id);
+
+    var settings = {
+        "url": `/api/sandwiches/${sandwich_id}/ingredients/add`,
+        "method": "POST",
+        "processData": false,
+        "contentType": false,
+        "dataType": "JSON",
+        "mimeType": "multipart/form-data",
+        "data": form
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        $(".js-sandwich-ingredients").empty();
+        // $(".js-sandwich-ingredients").append(response.ingredients[response.ingredients.length]);
+        response.ingredients.forEach(function(ingredient){
+            var ingredient = `<li>${ingredient.name} ------- ${ingredient.calories} Calories </li>`;
+        $(".js-sandwich-ingredients").append(ingredient);
+        $(".js-total-calories").html(`<h3 class="js-total-calories">Total Calories:${response.total_calories}</h3>`);
+
+});
+
+});
+
+}

@@ -32,15 +32,17 @@ class SandwichesController < ApplicationController
 
 
     def add_ingredient
-		sandwich_id = params[:id]
-		ingredient_id = params[:ingredient_id]
+        sandwich_id = params[:id]
+        ingredient_id = params[:ingredient_id]
 
-		sandwich = Sandwich.find_by(id: sandwich_id)
-		ingredient = Ingredient.find_by(id: ingredient_id)
+        sandwich = Sandwich.find_by(id: sandwich_id)
+        ingredient = Ingredient.find_by(id: ingredient_id)
 
-		sandwich.ingredients.push(ingredient)
-		render json: sandwich.to_json({:include => :ingredients})
-	end
+        sandwich.total_calories = sandwich.total_calories + ingredient.calories
+        sandwich.ingredients.push(ingredient)
+        sandwich.save
+        render json: sandwich.to_json({:include => :ingredients})
+    end
 
 
 end
