@@ -14,7 +14,8 @@ class SandwichesController < ApplicationController
 
     def show
         sandwich = Sandwich.find(params[:id])
-        render json: sandwich
+        list_of_ingredients = sandwich.ingredients
+        render json: sandwich.to_json({:include => :ingredients})
     end
 
     def update
@@ -28,6 +29,20 @@ class SandwichesController < ApplicationController
         sandwich.destroy
         render json: sandwich
     end
+
+
+    def add_ingredient
+		sandwich_id = params[:id]
+		ingredient_id = params[:ingredient_id]
+
+		sandwich = Sandwich.find_by(id: sandwich_id)
+		ingredient = Ingredient.find_by(id: ingredient_id)
+
+		sandwich.ingredients.push(ingredient)
+		render json: sandwich.to_json({:include => :ingredients})
+	end
+
+
 end
 
 private
