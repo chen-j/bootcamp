@@ -24,12 +24,12 @@ end
     else
       redirect_to '/signup'
     end
-  end   
+  end
 
   private
 
   def user_params
-     params.require(:user).permit(:username, :email)
+     params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 
 end
