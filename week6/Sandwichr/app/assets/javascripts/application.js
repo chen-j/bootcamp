@@ -44,7 +44,6 @@ function addIngredient() {
             var ingredient = `<li>${ingredient.name} ------- ${ingredient.calories} Calories </li>`;
         $(".js-sandwich-ingredients").append(ingredient);
         $(".js-total-calories").html(`<h3 class="js-total-calories">Total Calories:${response.total_calories}</h3>`);
-
 });
 
 });
