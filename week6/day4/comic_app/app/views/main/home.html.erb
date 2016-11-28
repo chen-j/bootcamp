@@ -1,3 +1,23 @@
-<h3>Track your fave comic books here</h3>
+<h2>Track your fave comic books here</h2>
 
 <h5>Only $95 dollars a month</h5>
+<% if user_signed_in? %>
+
+    <h6>See our users</h6>
+    <ul>
+        <% @users_list.each do |one_user| %>
+            <li><%= link_to(one_user.first_name, user_path(one_user)) %></li>
+        <% end %>
+    </ul>
+
+<% else %>
+
+    <h5>Our users</h5>
+        <%= link_to "Sign up to see their profiles", new_user_registration_path %>
+    <ul>
+        <% @users_list.each do |one_user| %>
+            <li><%= one_user.first_name %></li>
+        <% end %>
+    </ul>
+
+<% end %>
