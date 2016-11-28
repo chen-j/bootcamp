@@ -9,10 +9,16 @@
   </head>
 
   <body>
+      
       <h1>Comic Books</h1>
-    <%= yield %>
-    <footer>
-        <p>Made with &hearts; at Ironhack</p>
-    </footer>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+        <%= yield %>
+
+        <footer>
+            <p>Made with &hearts; at Ironhack</p>
+        </footer>
+
   </body>
 </html>
